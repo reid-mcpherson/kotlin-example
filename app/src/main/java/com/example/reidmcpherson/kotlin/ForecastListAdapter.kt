@@ -8,12 +8,12 @@ import com.example.reidmcpherson.kotlin.domain.ForecastList
 class ForecastListAdapter(val weekForecast: ForecastList) : RecyclerView.Adapter<ForecastListAdapter.ViewHolder>() {
 
     override fun onBindViewHolder(holder: ViewHolder?, position: Int) {
-        with(weekForecast.dailyForecast[position]) {
+        with(weekForecast[position]) {
             holder?.textView?.text = "$date - $description - $high/$low"
         }
     }
 
-    override fun getItemCount(): Int = weekForecast.dailyForecast.size
+    override fun getItemCount(): Int = weekForecast.size()
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {
         return ViewHolder(TextView(parent?.context))
