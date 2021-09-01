@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         forecastList.layoutManager = LinearLayoutManager(this)
+        Timber.d("Change")
         doAsync {
             val result = RequestForecastCommand("37206").execute()
             uiThread {
