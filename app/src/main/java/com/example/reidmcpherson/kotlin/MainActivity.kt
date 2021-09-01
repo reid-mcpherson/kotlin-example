@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
         Log.d("MainActivity", "Change 1")
+        Log.d("MainActivity", "Change 2")
 
     }
 
