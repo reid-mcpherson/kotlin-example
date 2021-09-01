@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
                 forecastList.adapter = ForecastListAdapter(result) {toast(it.date)}
             }
         }
+        Log.d("MainActivity", "Change 1")
 
     }
 
